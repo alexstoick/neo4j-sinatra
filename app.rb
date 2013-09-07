@@ -70,7 +70,7 @@ class Subscribers < Sinatra::Base
 			users.push(node.end_node.user_id.to_i)
 			#puts node.end_node.user_id
 		end
-		{ :id => params[:feedid] , :users => users }.to_json
+		{ :id => params[:feedid] , :subscribers => users.length , :users => users }.to_json
 
 	end
 end
